@@ -1,3 +1,4 @@
+% !TEX encoding = UTF-8 Unicode
 \section{Представления групп}
 \begin{defi}
 Пусть $G$ - группа, а $V$ - линейное векторное пространство, тогда гомоморфизм $\phi:G\to \GL{(V)}$ называется \textit{представлением группы $G$, а $V$} называется \textit{пространством представления}.\\ Будем писать $g.x$ вместо $(\phi(g))(x)$.
@@ -12,7 +13,7 @@
 \end{defi}
 
 \begin{ass}
- $\cen(G)$ - векторное пространство над $\mathbb{C}$, причем размерность $\cen(G)$ равна количеству классов сопряженности. Функции $f_1,\ldots,f_n$ будут базисом, где 
+ $\cen(G)$ - векторное пространство над $\mathbb{C}$, причем размерность $\cen(G)$ равна количеству классов сопряженности. Функции $f_1,\ldots,f_n$ будут базисом, где
 \begin{equation*}
 f_i(g) =
  \begin{cases}
@@ -57,7 +58,7 @@ $\chi_{_{V^*}} = \chi_{_V}$, где $V^*$ - сопряженное к $V$ про
 \end{remark}
 
 \begin{ass}
-$\{e_i\otimes f_j\}_{i=1,j=1}^{n,m}$ - базис $V\otimes W$. 
+$\{e_i\otimes f_j\}_{i=1,j=1}^{n,m}$ - базис $V\otimes W$.
 \end{ass}
 
 \begin{ass}
@@ -104,7 +105,7 @@ $\dim(V_1\oplus\ldots\oplus V_k) = \dim V_1+\ldots+\dim V_k$\\
 \end{defi}
 
 \begin{defi}
-Полуторалинейная форма называется \textit{положительно определенной} и \textit{эрмитовым произведением}, если: 
+Полуторалинейная форма называется \textit{положительно определенной} и \textit{эрмитовым произведением}, если:
 $$\forall x\in V:\beta(x,x)\geq 0$$
 $$\beta(x,x)=0\Leftrightarrow x=0$$
 $(V,\beta)$ - называется \textit{унитарным пространством}.
@@ -150,7 +151,7 @@ $$(f_1,f_2) = \frac{1}{|G|}\sum_{g\in G}f_1 \overline{f_2}$$ - эрмитово 
 \begin{thm}
 \textbf{Первое соотношение ортогональности.} Пусть $\phi:G\to\GL(V),\psi:G\to\GL(W)$ - неприводимые представления.
 \begin{equation*}
-(\chi_{_V},\chi_{_W}) = 
+(\chi_{_V},\chi_{_W}) =
  \begin{cases}
    1, & V\cong W\\
    0, &\text{otherwise}
@@ -203,7 +204,7 @@ $z(h):=\{ g\in G | gh=hg\}$ - \textit{централизатор} элемент
 \begin{thm}
 \textbf{Второе соотношение ортогональности.} Пусть $\chi_1,\ldots,\chi_r$ - все неприводимые характеры группы $G$. Пусть $C_1,\ldots,C_r$ - классы сопряженности и $g_1\in C_1,\ldots,g_r\in C_r$. Тогда:
 \begin{equation*}
-\sum_{i=1}^r\chi_i(g_j)\overline{\chi_i(g_k)} = 
+\sum_{i=1}^r\chi_i(g_j)\overline{\chi_i(g_k)} =
  \begin{cases}
    |z(g_j)|, & j=k\\
    0, &\text{otherwise}
@@ -259,7 +260,7 @@ $$\Hom_H(\Res_H^GV,W)\cong\Hom_G(V,\Ind_H^GW)$$
 \end{thm}
 
 \begin{corol}
-Пусть $G$ - группа, $H\subset G$ подгруппа, $V$ - представление $G$,$W$ - представление $H$. Тогда 
+Пусть $G$ - группа, $H\subset G$ подгруппа, $V$ - представление $G$,$W$ - представление $H$. Тогда
 $$(\chi_{_{\Res_H^GV}},\chi_{_W})_{_H} = (\chi_{_V},\chi_{_{\Ind_H^GW}})_{_W}$$
 \end{corol}
 
