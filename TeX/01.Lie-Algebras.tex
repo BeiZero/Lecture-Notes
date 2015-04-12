@@ -1,0 +1,105 @@
+% !TEX encoding = UTF-8 Unicode
+\section{Алгебры Ли}
+
+\begin{defi}
+\textit{Алгеброй Ли} называется векторное пространство $\mathfrak{g}$ над полем $\mathbb{K}$, снабжённое билинейным отображением $[\cdot,\cdot]:\mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}:(a,b)\mapsto[a,b]$, причем выполняются следующие свойства:
+\begin{enumerate}
+\item $\forall x \in \mathfrak{g}:[x,x] = 0$;
+\item $\forall x,y,z:[x, [y, z]] + [y, [z, x]] + [z, [x, y]] = 0$(тождество Якоби).
+\end{enumerate}
+Отображение $[\cdot,\cdot]$ обычно называется \textit{коммутатором} или \textit{скобкой Ли}.
+\end{defi}
+
+\begin{remark}
+В случае если характеристика поля не равна $2$ cвойство $(1)$ можно переписать в виде: $\forall x,y\in\mathfrak{g}:[x,y]=-[y,x]$.
+\end{remark}
+
+\begin{remark}
+Альтернативная формулировка тождества Якоби: ${[x,[y,z]]=[[x,y],z]+[y,[x,z]]}$.
+\end{remark}
+
+\begin{defi}
+Пусть $(\mathfrak{g},[\cdot,\cdot])$ — алгебра Ли. Подпространство $\mathfrak{h}\subset\mathfrak{g}$ называется \textit{подалгеброй Ли}, если $(\mathfrak{h},[\cdot,\cdot])$ — алгебра Ли.
+\end{defi}
+
+\begin{ass}
+Подпространство $\mathfrak{h}\subset\mathfrak{g}$ является подалгеброй Ли $\Leftrightarrow\forall x,y\in\mathfrak{h}:[x,y]\in\mathfrak{h}$.
+\end{ass}
+
+\begin{defi}
+Множество $\mathfrak{h}$ называется \textit{идеалом}, если $\forall x \in\mathfrak{h},\forall y\in\mathfrak{g}:[x,y]\in\mathfrak{h}$.
+\end{defi}
+
+\begin{defi}
+Алгебра Ли  $\mathfrak{g}$ называется \textit{простой}, если $\dim\mathfrak{g}>1$ и в ней нет идеалов кроме $\{0\}$ и $\mathfrak{g}$.
+\end{defi}
+
+\begin{defi}
+Пусть  $\mathfrak{g}_1,\mathfrak{g}_2$ - алгебры Ли. Линейное отображение $\Phi:\mathfrak{g}_1\to\mathfrak{g}_2$ называется \textit{гомоморфизмом}, если $$\forall x,y\in\mathfrak{g}_1:\Phi([x,y])=[\Phi(x),\Phi(y)].$$
+Если $\Phi$ - биекция, то $\Phi$ называются \textit{изоморфизмом}.
+\end{defi}
+
+\begin{defi}
+Пусть $V$ — векторное пространство над $\mathbb{K}$, а $\End(V)$ — пространство эндоморфизмов. Введем на $\End(V)$ скобку Ли формулой $[x,y]=xy-yx$. Полученная алгебра Ли называется \textit{полной линейной алгеброй} и обозначается $\mathfrak{gl}(V)$. Любая подалгебра в $\mathfrak{gl}(V)$ называется \textit{линейной алгеброй Ли}.
+\end{defi}
+
+\begin{defi}
+Пусть $V$ — векторное пространство над полем $\mathbb{K}$. \textit{Представлением алгебры Ли} $\mathfrak{g}$ называется отображение ${\tau:\mathfrak{g}\to\mathfrak{gl}(V):x\mapsto\tau_x}$ такое, что
+\begin{enumerate}
+\item $\tau_{x+y}=\tau_x+\tau_y$,
+\item $\tau_{\alpha x} = \alpha\tau_x$,
+\item $\tau_{[x,y]}=[\tau_x,\tau_y]$.
+\end{enumerate}
+\end{defi}
+
+\begin{remark}
+Представление алгебры Ли $\mathfrak{g}$ это просто гомоморфизм алгебр Ли $\tau:\mathfrak{g}\to\mathfrak{gl}(V)$.
+\end{remark}
+
+\begin{ass}
+Пусть $\mathfrak{g}=\mathfrak{gl}(n,\mathbb{K})$, а $V=\Mat(n,\mathbb{K})$, тогда $\tau_X(A)=XA+AX^T$ - представление.
+\end{ass}
+
+\begin{defi}
+Пусть $\mathfrak{g}$ — алгебра Ли, а $V=\mathfrak{g}$, тогда гомоморфизм $\ad:\mathfrak{g}\to\mathfrak{gl}(V):x\mapsto \ad_x$ такой, что $\ad_x(y) = [x,y]$, называется \textit{присоединенным представлением}.
+\end{defi}
+
+\begin{defi}
+Пусть $\mathfrak{g}$ — алгебра Ли, а $I\subset\mathfrak{g}$ — идеал. Фактормножество $\mathfrak{g}$ по отношению эквивалентности "$x\equiv y\mod I \Leftrightarrow x-y\in I$" $ $ называется \textit{факторалгеброй Ли} и обозначается $\mathfrak{g}/I$. Класс эквивалентности элемента $x$ обычно обозначается $x+I$ или $[x]$.
+\end{defi}
+
+\begin{ass}
+Факторалгебра Ли сама является алгеброй Ли: $[x+I,y+I]=[x,y]+I$.
+\end{ass}
+
+\begin{defi}
+Гомоморфизм $\pi:\mathfrak{g}\to\mathfrak{g}/I:x\mapsto x+I$ называется \textit{канонической(естественной) проекцией}.
+\end{defi}
+
+\begin{defi}
+Пусть $\Phi:\mathfrak{g}_1\to\mathfrak{g}_2$ - гомоморфизм, тогда
+
+$\Ker\Phi:=\{x\in\mathfrak{g}_1|\Phi(x)=0\}$ - ядро $\Phi$,
+
+$\Ima\Phi:=\{y\in\mathfrak{g}_2|\exists x\in\mathfrak{g}_1:\Phi(x)=y\}$ - образ $\Phi$.
+\end{defi}
+
+\begin{ass}
+Множество $\Ker\Phi$ — идеал в $\mathfrak{g}_1$, а $\Ima\Phi$ - подалгебра в $\mathfrak{g}_2$.
+\end{ass}
+
+\begin{thm}
+Пусть ${\Phi:\mathfrak{g}_1\to\mathfrak{g}_2}$ — гомоморфизм, тогда существует изоморфизм ${\psi:\mathfrak{g}_1/\Ker\Phi\to\Ima\Phi}$.
+\end{thm}
+
+\begin{defi}
+Пусть $\mathfrak{g}$ — алгебра Ли, тогда $\beta:\mathfrak{g}\times\mathfrak{g}\to\mathbb{K}:(x,y)\mapsto\Tr(\ad_x\ad_y)$ называется \textit{формой Киллинга}.
+\end{defi}
+
+\begin{remark}
+На английском языке ''форма Киллинга'' записывается как ''Killing form'', что дословно переводится как ''убивающая форма''.
+\end{remark}
+
+\begin{ass}
+Отображение $\beta$ — симметрическая билиненая форма, причем $(x,[y,z])=([x,y],z)$.
+\end{ass}
