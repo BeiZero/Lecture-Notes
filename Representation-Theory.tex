@@ -1,5 +1,3 @@
-
-
 \section{Представления групп}
 \begin{defi}
 Пусть $G$ - группа, а $V$ - линейное векторное пространство, тогда гомоморфизм $\phi:G\to \GL{(V)}$ называется \textit{представлением группы $G$, а $V$} называется \textit{пространством представления}.\\ Будем писать $g.x$ вместо $(\phi(g))(x)$.
@@ -218,13 +216,13 @@ $z(h):=\{ g\in G | gh=hg\}$ - \textit{централизатор} элемент
 \end{ass}
 
 \begin{ass}
-Пусть $\phi:G\to\GL(V),\psi:G\to\GL(W)$ - представления группы $G$. Рассмотрим пространство $\mEnd_{\mathbb{C}}(V,W)$ всех линейных отображений из $V$ в $W$, тогда отображение $\gamma:G\to\mEnd_{\mathbb{C}}(V,W)$ такое, что:
-$$\forall g\in G,\theta\in \mEnd_{\mathbb{C}}(V,W): (\gamma(g))(\theta) = \psi(g)\circ\theta\circ\phi(g^{-1})$$
+Пусть $\phi:G\to\GL(V),\psi:G\to\GL(W)$ - представления группы $G$. Рассмотрим пространство $\End_{\mathbb{C}}(V,W)$ всех линейных отображений из $V$ в $W$, тогда отображение $\gamma:G\to\End_{\mathbb{C}}(V,W)$ такое, что:
+$$\forall g\in G,\theta\in \End_{\mathbb{C}}(V,W): (\gamma(g))(\theta) = \psi(g)\circ\theta\circ\phi(g^{-1})$$
 будет представлением группы $G$.
 \end{ass}
 
 \begin{ass}
-Пусть V,W - векторные пространства над $\mathbb{C}$. Тогда отображение ${\eta:V^{*}\otimes W\to\mEnd_{\mathbb{C}}(V,W)}$ заданное правилом: $$\forall \lambda\in V^{*},w\in W,x\in V:(\eta(\lambda\otimes w))(x):=\lambda(x)w$$
+Пусть V,W - векторные пространства над $\mathbb{C}$. Тогда отображение ${\eta:V^{*}\otimes W\to\End_{\mathbb{C}}(V,W)}$ заданное правилом: $$\forall \lambda\in V^{*},w\in W,x\in V:(\eta(\lambda\otimes w))(x):=\lambda(x)w$$
 является изоморфизмом векторных пространств.\\ Если $V,W$ - представления группы $G$, то $\eta$ будет изоморфизмом представлений.
 \end{ass}
 
