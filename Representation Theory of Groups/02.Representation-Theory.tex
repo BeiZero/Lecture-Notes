@@ -1,0 +1,281 @@
+% !TEX encoding = UTF-8 Unicode
+\section{Представления групп}
+\begin{defi}
+Пусть $G$ - группа, а $V$ - линейное векторное пространство, тогда гомоморфизм $\phi:G\to \GL{(V)}$ называется \textit{представлением группы $G$, а $V$} называется \textit{пространством представления}.\\ Будем писать $g.x$ вместо $(\phi(g))(x)$.
+\end{defi}
+
+\begin{defi}
+Пусть $\phi:G\to\GL(V)$ - представление. Функция $\chi:G\to\mathbb{C}$ действующая по правилу: $\chi(g) = tr(\phi(g))$, называется\textit{ характером представления $V$}.
+\end{defi}
+
+\begin{defi}
+Функция $f:G\to\mathbb{C}$ называется \textit{центральной функцией на $G$}, если $\forall g,h\in G: f(g)=f(hgh^{-1})$. Множество всех центральных функций обозначается $\cen(G)$.
+\end{defi}
+
+\begin{ass}
+ $\cen(G)$ - векторное пространство над $\mathbb{C}$, причем размерность $\cen(G)$ равна количеству классов сопряженности. Функции $f_1,\ldots,f_n$ будут базисом, где
+\begin{equation*}
+f_i(g) =
+ \begin{cases}
+   1, &g\in K_i\text{($i$-ый класс сопряженности)}\\
+   0, &\text{otherwise}
+ \end{cases}
+\end{equation*}
+\end{ass}
+
+\begin{ass}
+Пусть $\phi:G\to\GL(V)$ - любое представление, а $\chi$ - его характер, тогда $\chi\in\cen(G)$.
+\end{ass}
+
+\begin{ass}
+Пусть $\phi:G\to\GL(V)$ - любое представление, тогда: $$\forall g\in G:\chi(g^{-1})=\overline{\chi(g)}$$
+\end{ass}
+
+\begin{defi}
+Пусть $\phi:G\to\GL(V),\psi:G\to\GL(W)$ - представления. \textit{Прямой суммой представлений} $(\phi + \psi)$ называется гомоморфизм: $\eta:G\to\GL(V\oplus W)$.\\По определению: $(\eta(g))(x,y):=((\phi(g))(x),(\psi(g))(y))$.\\$\chi_{_{V\oplus W}} = \chi_{_V} + \chi_{_W}$
+\end{defi}
+
+\begin{ass}
+$\chi_{_{V^*}} = \chi_{_V}$, где $V^*$ - сопряженное к $V$ пространство.
+\end{ass}
+
+\begin{defi}
+Пусть $V,W$ - векторные пространства над $K$. Рассмотрим множество ${F=\left\{\sum\limits_{i=0}^nz_i(x_i,y_i)|x_i\in V,y_i\in W,z_i\in\mathbb{Z},n\in\mathbb{N}\right\}}$. Введем на $F$ отношение эквивалентности заданное правилами:
+\begin{enumerate}
+\item $(\alpha x,y)\sim(x,\alpha y)$, где $\alpha\in K$,
+\item $(x_1+x_2,y)\sim (x_1,y)+(x_2,y)$,
+\item $(x,y_1+y_2)\sim (x,y_1)+(x,y_2)$.
+\end{enumerate}
+Фактормножество $F/_\sim$ является векторным пространством и называется \textit{тензорным произведением}, обозначается $V\otimes W$. Класс элемента $(x,y)$ обозначается $x\otimes y$.
+\end{defi}
+
+\begin{remark}
+Тензорное произведение $V_1,V_2$ так же может быть определено как пространство $W$ вместе с полилинейным отображением $\otimes:V_1\times V_2\to W$ обладающим универсальным свойством(читаем теорию категорий).
+\end{remark}
+
+\begin{remark}
+Данные выше определения тензорного произведения без изменений переносятся на случай модулей над кольцами.
+\end{remark}
+
+\begin{ass}
+$\{e_i\otimes f_j\}_{i=1,j=1}^{n,m}$ - базис $V\otimes W$.
+\end{ass}
+
+\begin{ass}
+$\chi_{_{V\otimes W}} = \chi_{_V} \times \chi_{_W}$.
+\end{ass}
+
+\begin{defi}
+Пусть $\phi:G\to\GL(V),\psi:G\to\GL(W)$ - представления. Линейное отображение $F:V\to W$ называется \textit{морфизмом представлений}, если $\forall g\in G,\forall x\in V$:
+$$F((\phi(g))(x)) = (\psi(g))(F(x))$$
+$$F(g.x) = g.F(x)$$
+\end{defi}
+
+\begin{defi}
+Морфизм представлений $F:V\to W$ группы $G$, называется \textit{изоморфизмом представлений}, если он является биекцией.\\
+Если существует хоть один изоморфизм между $V$ и $W$, то их называют\textit{ изоморфными представлениями группы} $G$.
+\end{defi}
+
+\begin{defi}
+Пусть $\phi:G\to\GL(V)$ - представление. $W\subset V$ называется \textit{инвариантным подпространством}, если $\forall g\in G,\forall x\in W: (\phi(g))(x)\in W$. Очевидно, что W само является представлением $G$.
+\end{defi}
+
+\begin{defi}
+Если в $V$ существуют нетривиальные инвариантные подпространства, то $V$ называется \textit{приводимым представлением группы $G$}. Иначе $V$ называется \textit{неприводимым представлением группы $G$}.
+\end{defi}
+
+\begin{ass}
+Пусть $V_1,\ldots,V_k$ - любые векторные пространства.\\
+$V_1\oplus\ldots\oplus V_k:=\{(x_1,\ldots,x_k)|x_1\in V_1,\ldots,x_k\in V_k\}$\\
+$\dim(V_1\oplus\ldots\oplus V_k) = \dim V_1+\ldots+\dim V_k$\\
+Если каждое из них является представлением группы $G$, то и их прямая сумма будет представлением.
+\end{ass}
+
+\begin{defi}
+Представление $V$ группы $G$ называется \textit{вполне приводимым представлением}, если оно изоморфно прямой сумме неприводимых.
+\end{defi}
+
+\begin{defi}
+Пусть $V$ - векторное пространство над $\mathbb{C}$, отображение $\beta:V\times V\to \mathbb{C}$ называется \textit{полуторалинейной формой}, если:
+\begin{enumerate}
+  \item $\beta(x_1 + x_2,y) = \beta(x_1,y) + \beta(x_2,y)$
+  \item $\beta(\alpha x,y) = \alpha\times\beta(x,y)$
+  \item $\beta(y,x) = \overline{\beta(x,y)}$
+\end{enumerate}
+\end{defi}
+
+\begin{defi}
+Полуторалинейная форма называется \textit{положительно определенной} и \textit{эрмитовым произведением}, если:
+$$\forall x\in V:\beta(x,x)\geq 0$$
+$$\beta(x,x)=0\Leftrightarrow x=0$$
+$(V,\beta)$ - называется \textit{унитарным пространством}.
+\end{defi}
+
+\begin{defi}
+Пусть $V$ - векторное пространство, а $W$ - подпространство в $V$. \textit{Ортогональным дополнением к подпространству} $W$ называется ${W^{\perp}:=\{x\in V|x\perp y,\forall y\in V\}(x\perp y \Leftrightarrow (x,y) = 0)}$.
+\end{defi}
+
+\begin{defi}
+Пусть $V$ - унитарное конечномерное пространство являющееся представлением группы G. Эрмитово произведение называется \textit{инвариантным}, если $\forall x,y\in V,g\in G:(x,y)=(g.x,g.y)$
+\end{defi}
+
+\begin{ass}
+Если эрмитово произведение инвариантно и $W\subset V$ - инвариантно, то $W^{\perp}$ - тоже инвариантно.
+\end{ass}
+
+\begin{thm}
+\textbf{Теорема Машке.} Любое конечномерное комплексное представление любой конечно группы вполне приводимо.
+\end{thm}
+
+\begin{lemma}
+\textbf{Лемма Шура.} \begin{enumerate}
+  \item Пусть $V,W$ - неприводимые представления группы $G$, а $\phi:V\to W$ - морфизм, тогда $\phi$ - изоморфизм, либо $\phi=0$.
+  \item Пусть $V$ - неприводимое представление группы $G$. $\phi:V\to V$ - морфизм, тогда: $$\exists\lambda\in\mathbb{C},\forall x\in V:\phi(x)= \lambda x$$
+\end{enumerate}
+\end{lemma}
+
+\begin{ass}
+Пусть $\phi:G\to\GL(V),\psi:G\to\GL(V)$ - неприводимые представления, $\sigma:V\to W$ - любое линейно отображение. Обозначим через $\widetilde{\sigma}$ линейное отображение вида:
+$$\widetilde{\sigma}:=\frac{1}{|G|}\sum_{g\in G} \psi(g)\circ\sigma\circ\phi^{-1}$$
+тогда:
+\begin{enumerate}
+  \item $\phi\ncong\psi:\widetilde{\sigma}=0$
+  \item $V=W,\phi=\psi,$ то $\widetilde{\sigma} = \frac{\tr\sigma}{\dim V}id_V$
+\end{enumerate}
+\end{ass}
+
+\begin{ass}
+$$(f_1,f_2) = \frac{1}{|G|}\sum_{g\in G}f_1 \overline{f_2}$$ - эрмитово произведение на $\cen(G)$. \\$\cen(G)$ - унитарное пространство.
+\end{ass}
+
+\begin{thm}
+\textbf{Первое соотношение ортогональности.} Пусть $\phi:G\to\GL(V),\psi:G\to\GL(W)$ - неприводимые представления.
+\begin{equation*}
+(\chi_{_V},\chi_{_W}) =
+ \begin{cases}
+   1, & V\cong W\\
+   0, &\text{otherwise}
+ \end{cases}
+\end{equation*}
+\end{thm}
+
+\begin{ass}
+\begin{enumerate}
+  \item Пусть $V$ - представление группы $G$, $V = m_1V_1\oplus\ldots\oplus m_kV_k$ - его разложение на неприводимые, тогда кратность вхождения $i$-ого неприводимого представления $m_i=(\chi_{_V},\chi_{_{V_i}})$.
+  \item Любое представление можно однозначно разложить в прямую сумму неприводимых.
+  \item Если $\chi_V = \chi_W$, то $V\cong W$.
+\end{enumerate}
+\end{ass}
+
+\begin{ass}
+Если $V$ - любое представление, то $(\chi_{_V},\chi_{_V})\in\mathbb{Z}_{\geq 0}$. При этом $V$ неприводимо $\leftrightarrow (\chi_{_V},\chi_{_V}) = 1$.
+\end{ass}
+
+\begin{lemma}
+Пусть $\Gamma\in\cen(G),\phi:G\to\GL(V)$ - неприводимое представление, $\chi$ - его характер. Положим $$\psi:=\sum_{h\in G}\overline{\Gamma(h)}\phi(h):V\to V$$
+Тогда $\psi = \lambda\times id_V$, где $\lambda = \frac{|G|}{\chi(e)}(\chi,\Gamma)$.
+\end{lemma}
+
+\begin{thm}
+Пусть $V_1,\ldots,V_k$ - все попарно не изоморфные неприводимые представления $G$. $\chi_1,\ldots,\chi_k$ - их характеры - базис в $\cen(G)$.
+\end{thm}
+
+\begin{ass}
+Количество неприводимых представлений равно числу классов сопряженности в $G$.
+\end{ass}
+
+\begin{defi}
+Представление $\phi:G\to \GL(W)$ называется \textit{регулярным}, если $W$— пространство функций на группе $G$ и линейное преобразование $\phi(g):W\to W$ ставит в соответствие каждой функции $f(\omega), \omega\in G$, функцию $f(g\omega), \omega\in G$.
+\end{defi}
+
+\begin{ass}
+Каждое неприводимое представление входит в регулярное с крастностью равной его размерности.
+\end{ass}
+
+\begin{thm}
+\textbf{Теорема Фробениуса.} Пусть $V_1,\ldots,V_r$ - все неприводимые представления группы $G$, тогда:
+$$\sum_{i=1}^r(\dim V_i)^2 = |G|$$
+\end{thm}
+
+\begin{defi}
+$z(h):=\{ g\in G | gh=hg\}$ - \textit{централизатор} элемента $h$.
+\end{defi}
+
+\begin{thm}
+\textbf{Второе соотношение ортогональности.} Пусть $\chi_1,\ldots,\chi_r$ - все неприводимые характеры группы $G$. Пусть $C_1,\ldots,C_r$ - классы сопряженности и $g_1\in C_1,\ldots,g_r\in C_r$. Тогда:
+\begin{equation*}
+\sum_{i=1}^r\chi_i(g_j)\overline{\chi_i(g_k)} =
+ \begin{cases}
+   |z(g_j)|, & j=k\\
+   0, &\text{otherwise}
+ \end{cases}
+\end{equation*}
+\end{thm}
+
+\begin{ass}
+Пусть ${\phi:G\to\GL(V)}$ - представление группы $G$, а ${\phi\lvert_H:H\to\GL(V)}$ его ограничение на подгруппу $H$. Тогда из неприводимости ${\phi\lvert_H}$ следует неприводимость ${\phi}$.
+\end{ass}
+
+\begin{ass}
+Пусть $\phi:G\to\GL(V),\psi:G\to\GL(W)$ - представления группы $G$. Рассмотрим пространство $\End_{\mathbb{C}}(V,W)$ всех линейных отображений из $V$ в $W$, тогда отображение $\gamma:G\to\End_{\mathbb{C}}(V,W)$ такое, что:
+$$\forall g\in G,\theta\in \End_{\mathbb{C}}(V,W): (\gamma(g))(\theta) = \psi(g)\circ\theta\circ\phi(g^{-1})$$
+будет представлением группы $G$.
+\end{ass}
+
+\begin{ass}
+Пусть V,W - векторные пространства над $\mathbb{C}$. Тогда отображение ${\eta:V^{*}\otimes W\to\End_{\mathbb{C}}(V,W)}$ заданное правилом: $$\forall \lambda\in V^{*},w\in W,x\in V:(\eta(\lambda\otimes w))(x):=\lambda(x)w$$
+является изоморфизмом векторных пространств.\\ Если $V,W$ - представления группы $G$, то $\eta$ будет изоморфизмом представлений.
+\end{ass}
+
+\begin{ass}
+$\dim\Hom_G(V,W)=(\chi_{_V},\chi_{_W})$
+\end{ass}
+
+\begin{ass}
+Пусть $G$ - любая группа, $H\subset G$ - любая подгруппа. Если $\phi:G\to\GL(V)$ - представление $G$, то $\phi|_H$ - представление $H$. Обозначение $\Res_H^G(V)$.
+\end{ass}
+
+\begin{defi}
+Пусть $G$ - группа, а $H\subset G$ - подгруппа. Пусть задано представление $H$ в $V$. Рассмотрим векторное пространство $\Ind_H^G(V):=\{f:G\to V|f(hx)=h.f(x),\forall x\in G,h\in H\}$. Определим действие группы правилом $(g.f)(x):=f(xg)$.\\
+$\Ind_H^G(V)$ называется \textit{индуцированным представлением}.
+\end{defi}
+
+\begin{ass}
+$\dim\Ind_H^GV = \dim V [G:H]$
+\end{ass}
+
+\begin{thm}
+Пусть $g_1\ldots g_l$ полная система представителей правых смежных классов $G$ по $H$, тогда:
+$$\chi_{_{\Ind_H^GV }}(g) = \sum_{1\leq i \leq l,g_igg_i^{-1}\in H}\chi_{_V}(g_igg_i^{-1})$$
+\end{thm}
+
+\begin{corol}
+Пусть $g_1\ldots g_l$ полная система представителей левых смежных классов $G$ по $H$, тогда:
+$$\chi_{_{\Ind_H^GV }}(g) = \sum_{1\leq i \leq l,g_i^{-1}gg_i\in H}\chi_{_V}(g_i^{-1}gg_i)$$
+\end{corol}
+
+\begin{thm}[Двойственность Фробениуса]
+Пусть $G$ - группа, $H\subset G$ подгруппа, $V$ - представление $G$,$W$ - представление $H$. Тогда существует изоморфизм векторных пространств:
+$$\Hom_H(\Res_H^GV,W)\cong\Hom_G(V,\Ind_H^GW)$$
+\end{thm}
+
+\begin{corol}
+Пусть $G$ - группа, $H\subset G$ подгруппа, $V$ - представление $G$,$W$ - представление $H$. Тогда
+$$(\chi_{_{\Res_H^GV}},\chi_{_W})_{_H} = (\chi_{_V},\chi_{_{\Ind_H^GW}})_{_W}$$
+\end{corol}
+
+\begin{defi}
+Пусть $G$ - любая группа. Подгруппа порожденная элементами вида $[g_1,g_2]=g_1g_2g_1^{-1}g_2^{-1}$ называется \textit{коммутантом} и обозначается $[G,G]$.
+\end{defi}
+
+\begin{ass}
+Любая подгруппа содержащая коммутант является нормальной.
+\end{ass}
+
+\begin{ass}
+$G/H$ - абелева тогда и только тогда, когда $[G,G]\subset H$.
+\end{ass}
+
+\begin{remark}
+В любой непонятной ситуации факторизуй по коммутанту. Таким образом если у нас есть группа $G$ мы можем получить серию её одномерных представлений.
+\end{remark}

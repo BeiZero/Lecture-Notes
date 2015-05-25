@@ -1,0 +1,56 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[10pt,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage[english,russian]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref,xcolor}
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+\sloppy
+
+\theoremstyle{plain}
+\newtheorem{thm}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{corol}{Следствие}
+\newtheorem{prop}{Предложение}
+\newtheorem{ass}{Утверждение}
+\theoremstyle{definition}
+\newtheorem{defi}{Определение}
+\newtheorem*{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\cen}{C}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Ort}{O}
+\DeclareMathOperator{\Aff}{Aff}
+
+
+\definecolor{linkcolor}{HTML}{0000FF} % цвет ссылок
+\definecolor{urlcolor}{HTML}{0000FF} % цвет гиперссылок
+
+\title{Теория Представлений.}
+\author{Автор конспекта \href{http://vk.com/beizero}{Федоров И.И.}\\По лекциям Игнатьева М.В.}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\input{01.Group-Theory}
+\input{02.Representation-Theory}
+\input{03.Representation-of-reductive-groups}
+
+\end{document}
