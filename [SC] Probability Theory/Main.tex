@@ -1,0 +1,110 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[10pt,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage[english,russian]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref,xcolor}
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+\sloppy
+
+\theoremstyle{plain}
+\newtheorem{thm}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{corol}{Следствие}
+\newtheorem{prop}{Предложение}
+\newtheorem{ass}{Утверждение}
+\theoremstyle{definition}
+\newtheorem{defi}{Определение}
+\newtheorem*{remark}{Замечание}
+\newtheorem{example}{Пример}
+
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\cen}{C}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Ort}{O}
+\DeclareMathOperator{\Aff}{Aff}
+
+
+\definecolor{linkcolor}{HTML}{0000FF} % цвет ссылок
+\definecolor{urlcolor}{HTML}{0000FF} % цвет гиперссылок
+
+\title{Теория Вероятностей}
+\author{Автор конспекта \href{http://vk.com/beizero}{Федоров И.И.}\\По лекциям Савинова Е.А.}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Вероятностное пространство}
+
+\begin{defi}
+Теория вероятностей -- раздел математики, изучающий случайные события. Теория вероятностей занимается явлениями, которые могут произойти некоторое число раз и обладают свойством статистической устойчивости.
+\end{defi}
+
+\begin{defi}
+\textit{Случайное событие} -- событие, которое при осуществлении некоторых условий может произойти или не произойти.
+\end{defi}
+
+\begin{defi}
+Событие называется \textit{достоверным}, если в результате испытаний оно обязательно происходит.
+\end{defi}
+
+\begin{defi}
+Событие называется \textit{невозможным}, если в результате испытаний оно произойти не может.
+\end{defi}
+
+\begin{defi}
+События называются \textit{несовместными}, если в результате испытания они не могут произойти вместе.
+\end{defi}
+
+\begin{defi}
+Совокупность $\mathfrak{A}$ подмножеств множества $\Omega$ называется \textit{алгеброй множеств}, если выполняются условия:
+\begin{enumerate}
+\item $\Omega\in \mathfrak{A}$
+\item $\forall A,B\in \mathfrak{A}\Rightarrow A\cup B\in\mathfrak{A},\bar{A}\in\mathfrak{A}$
+\end{enumerate}
+\end{defi}
+
+\begin{defi}
+Алгебра $\mathfrak{A}$ подмножеств $\Omega$ называется \textit{$\sigma$-алгеброй множеств}, если для любого счетного набора множеств $\{A_i\}_{i\in \mathbb{N}}\in\mathfrak{A}:\bigcup\limits_{i\in \mathbb{N}}A_i\in\mathfrak{A}$.
+\end{defi}
+
+\begin{defi}
+Пусть $\{\mathfrak{A}_i\}_{i\in I}$ -- набор алгебр подмножеств множества $\Omega$, тогда их пересечение это множество $\{A\subset \Omega:A\in\mathfrak{A}_i,\forall i\in I\}$.
+\end{defi}
+
+\begin{ass}
+Пересечение $\sigma$-алгебр является $\sigma$-алгеброй.
+\end{ass}
+
+\begin{defi}
+Пусть $\mathfrak{A}$ -- некоторая совокупность подмножеств $\Omega$, пересечение всех $\sigma$-алгебр содержащих $\mathfrak{A}$ называется наименьшой $\sigma$-алгеброй содержащей $\mathfrak{A}$ или $\sigma$-алгеброй порожденной $\mathfrak{A}$, и обозначается $\sigma(A)$.
+\end{defi}
+
+\begin{defi}
+Неотрицательная функции $\mu:\mathfrak{A}\to\mathbb{R}_+$ называется \textit{конечно-аддитивной мерой}, если $\forall:A,B\in \mathfrak{A}, A\cap B = \emptyset:\mu(A+B)=\mu(A)+\mu(B)$.
+\end{defi}
+
+\begin{defi}
+Конечно-аддитивная мера $\mu:\mathfrak{A}\to\mathbb{R}_+$ называется счетно-аддитивной, если $\forall A_1,\dots,A_n,\ldots\in\mathfrak{A},A_i,A_j=\emptyset,i\neq j:\mu\left(\bigcup\limits_{i\in\mathbb{N}}A_i\right)=\sum\limits_{i=1}^\infty\mu(A_i)$.
+\end{defi}
+
+\begin{defi}
+\textit{Вероятностным пространством} называется тройка $(\Omega,\mathfrak{F},\mathbb{P})$, где $\Omega$ -- пространство элементарных событий, $\mathfrak{F}$ -- $\sigma$-алгебра подмножеств  $\Omega$, 
+\end{defi}
+
+\end{document}
